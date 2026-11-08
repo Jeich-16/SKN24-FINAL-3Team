@@ -51,7 +51,7 @@ RAG(Retrieval-Augmented Generation)는 산출물 생성 품질을 높이기 위�
 
 ## 4. Collection 구조 설계
 
-초기에는 산출물 에이전트마다 참조 collection을 1:1로 매칭하는 분리 방안을 검토했으나, `applies_to` 등 메타데이터 필터링으로 에이전트별 구분이 가능하므로 **단일 collection(`ALPLED_reference`)으로 통합**하는 방향으로 최종 결정했습니다. 중복 적재 없이 모든 문서를 하나의 collection에 적재하고, 쿼리 시 메타데이터 필터로 에이전트별 검색 범위를 제한합니다.
+초기에는 산출물 에이전트마다 참조 collection을 1:1로 매칭하는 분리 방안으로 진행했으나, `applies_to` 등 메타데이터 필터링으로 에이전트별 구분이 가능하므로 **단일 collection(`ALPLED_reference`)으로 통합**하는 방향으로 수정했습니다. 중복 적재 없이 모든 문서를 하나의 collection에 적재하고, 쿼리 시 메타데이터 필터로 에이전트별 검색 범위를 제한합니다.
 
 ### 메타데이터 필터 구조
 
